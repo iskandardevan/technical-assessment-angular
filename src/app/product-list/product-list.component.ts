@@ -45,13 +45,18 @@ export class ProductListComponent {
     console.log('ini setPage', page);
     console.log('ini pagedEmployees', this.pagedEmployees);
   }
-  // fungsi next page
+
+  // Fungsi to sort by basic salary
+  sortByBasicSalary(): void {
+    this.employees.sort((a, b) => b.basicSalary - a.basicSalary);
+    this.setPage(1);
+  }
+   
   // Function to navigate to the next page
   nextPage(): void {
     this.setPage(this.currentPage + 1);
   }
-
-  // fungsi previous page
+ 
   // Function to navigate to the previous page
   previousPage(): void {
     this.setPage(this.currentPage - 1);
