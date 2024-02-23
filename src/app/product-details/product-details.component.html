@@ -1,0 +1,24 @@
+<div id="detail-product">
+  <p class="d-flex justify-content-center pt-4 font-weight-bold" routerLink="/admin"> Home > Details Page</p>
+  <div class="card m-5">
+    <!-- <img *ngIf="!image" src="../../assets/qinetics-logo.png" class="card-img-top" alt="..."> -->
+    <img *ngIf="image" src="{{image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{productName}}</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="">${{price}}</small></p>
+    </div>
+  </div>
+  <div class="card m-5">
+    <div class="card-header">
+      {{category}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Details</h5>
+      <p class="card-text">{{description}}</p>
+      <a routerLink="/admin/products" class="btn btn-primary m-2 ">Back</a>
+      <!-- <a (click)="editValue()" class="btn btn-primary m-2  ">Edit</a> -->
+      <a (click)="delValue()" class="btn btn-danger m-2  ">Delete</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+
+<!-- add product -->
+<div *ngIf="!edit" class="row d-flex justify-content-center align-items-center p-4 m-4 w-50">
+  <div class="input-group mb-3">
+    <input type="text" #inputUser class="form-control" aria-label="Default" placeholder="{{name ? name : 'Name Product'}}" aria-describedby="inputGroup-sizing-default">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" #inputDescription class="form-control" aria-label="Default" placeholder="{{description ? description : 'Description'}}" aria-describedby="inputGroup-sizing-default">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">$</span>
+    </div>
+    <input type="number" #inputPrice id="price" class="form-control" placeholder="{{price ? price : 'Price'}}" aria-label="Amount (to the nearest dollar)">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" #inputCategory id="category" class="form-control" placeholder="{{category ? category : 'Category'}}" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  </div>
+  <div class="input-group mb-3">
+    <input type="file" #inputImage id="image" class="form-control" aria-label="Upload">
+  </div>
+  <button (click)="addValue(inputUser.value, inputDescription.value, inputPrice.value, inputCategory.value, inputImage)"class="btn btn-primary m-4">Add Product</button>
+</div>
+
+<div *ngIf="edit" class="row d-flex justify-content-center align-items-center p-4 m-4 w-50">
+  <div class="input-group mb-3">
+    <input type="text" #inputUser class="form-control" aria-label="Default" placeholder="{{name ? name : 'Name Product'}}" aria-describedby="inputGroup-sizing-default">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" #inputDescription class="form-control" aria-label="Default" placeholder="{{description ? description : 'Description'}}" aria-describedby="inputGroup-sizing-default">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">$</span>
+    </div>
+    <input type="number" #inputPrice id="price" class="form-control" placeholder="{{price ? price : 'Price'}}" aria-label="Amount (to the nearest dollar)">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" #inputCategory id="category" class="form-control" placeholder="{{category ? category : 'Category'}}" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  </div>
+  <div class="input-group mb-3">
+    <input type="file" #inputImage id="image" class="form-control" aria-label="Upload">
+  </div>
+  <button (click)="updateValue(inputUser.value, inputDescription.value, inputPrice.value, inputCategory.value, inputImage)"class="btn btn-primary m-4">Edit Product</button>
+</div>
+
+
